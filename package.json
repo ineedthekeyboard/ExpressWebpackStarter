@@ -1,8 +1,9 @@
 {
   "name": "sampleexpress",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "private": true,
   "scripts": {
+    "postinstall": "webpack -p --config webpack.prod.config.js --progress",
     "buildClientProd": "npm run cleanClient && webpack -p --config webpack.prod.config.js --progress",
     "buildClientDev": "npm run cleanClient && webpack --config webpack.dev.config.js",
     "cleanClient": "rimraf public/*",
@@ -12,12 +13,15 @@
   "dependencies": {
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
+    "crypto": "0.0.3",
     "debug": "~2.2.0",
     "express": "~4.14.0",
+    "extract-text-webpack-plugin": "^3.0.0",
     "hbs": "~4.0.1",
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.9.8",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "throng": "^4.0.0"
   },
   "devDependencies": {
     "ajv": "^5.2.2",
