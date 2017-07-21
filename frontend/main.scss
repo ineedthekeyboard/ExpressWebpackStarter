@@ -1,0 +1,10 @@
+@import 'stylesheets/page1';
+$bg-color: pink;
+body {
+  background: $bg-color;
+  padding: 55px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  a {
+    color: #00B7FE;
+  }
+}
